@@ -1,14 +1,14 @@
 {
-  "name": "html-entities",
-  "version": "0.4.0",
+  "name": "html-entitize",
+  "version": "0.1.0",
   "main": "./lib/html-entities",
   "description": "Encode and decode HTML entities",
-  "repository": "https://github.com/AbeEstrada/atom-html-entities",
+  "repository": "https://.github.com/tomcardoso/atom-html-entitize",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0 <2.0.0"
   },
   "dependencies": {
-    "html-entities": "^1.1.2"
+    "he": "latest"
   }
 }

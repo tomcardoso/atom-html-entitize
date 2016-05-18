@@ -2,10 +2,10 @@
   {
     'label': 'Packages'
     'submenu': [
-      'label': 'HTML Entities'
+      'label': 'HTML Entitize'
       'submenu': [
-        { 'label': 'Encode', 'command': 'html-entities:encode' }
-        { 'label': 'Decode', 'command': 'html-entities:decode' }
+        { 'label': 'Encode', 'command': 'html-entitize:encode' }
+        { 'label': 'Decode', 'command': 'html-entitize:decode' }
       ]
     ]
   }

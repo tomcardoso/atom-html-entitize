@@ -1,13 +1,11 @@
-# HTML Entities [![Build Status](https://travis-ci.org/AbeEstrada/atom-html-entities.svg?branch=master)](https://travis-ci.org/AbeEstrada/atom-html-entities)
+# HTML Entities [![Build Status](https://travis-ci.org/tomcardoso/atom-html-entitize.svg?branch=master)](https://travis-ci.org/tomcardoso/atom-html-entitize)
 
-Encode and decode HTML entities from selected text or the current document.
+This is a fork of [HTML Entities](https://github.com/AbeEstrada/atom-html-entities) using the `he` library for encoding and decoding HTML entities.
 
-![Screenshot](https://f.cloud.github.com/assets/7937/2394928/0d5a0b98-a9c0-11e3-9126-b6ce7c76cef0.gif)
+If you want to add a shortcut, just add this to your `keymap.cson`:
 
-If you want you can add this code to you `keymap.cson` to add a shortcut.
-
-    '.editor':
-      'f5': 'html-entities:encode'
-      'f6': 'html-entities:decode'
-
-`F5` and `F6` are optional.
+```
+'atom-text-editor':
+  'key1': 'html-entities:encode'
+  'key2': 'html-entities:decode'
+```

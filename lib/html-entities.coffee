@@ -2,28 +2,31 @@ Entities = null
 
 module.exports =
   activate: (state) ->
-    atom.commands.add 'atom-workspace', 'html-entities:encode', ->
+    atom.commands.add 'atom-workspace', 'html-entitize:encode', ->
       entitiesCoderDecoder('encode')
 
-    atom.commands.add 'atom-workspace', 'html-entities:decode', ->
+    atom.commands.add 'atom-workspace', 'html-entitize:decode', ->
       entitiesCoderDecoder('decode')
 
 entitiesCoderDecoder = (action) ->
   editor = atom.workspace.getActiveTextEditor()
   return unless editor?
 
-  Entities ?= require('html-entities').AllHtmlEntities
-  entities = new Entities()
+  Entities = require('he')
 
   selectedText = editor.getSelectedText()
   if selectedText and action is 'decode'
-    editor.insertText(entities.decode(selectedText))
+    editor.insertText(Entities.decode(selectedText))
 
   else if selectedText
-    editor.insertText(entities.encode(selectedText))
+    editor.insertText(Entities.encode(selectedText, {
+      'useNamedReferences': true
+    }))
 
   else if action is 'decode'
-    editor.setText(entities.decode(editor.getText()))
+    editor.setText(Entities.decode(editor.getText()))
 
   else
-    editor.setText(entities.encode(editor.getText()))
+    editor.setText(Entities.encode(editor.getText(), {
+      'useNamedReferences': true
+    }))
