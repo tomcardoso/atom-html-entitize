@@ -1,6 +1,6 @@
 {
   "name": "html-entitize",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "main": "./lib/html-entities",
   "description": "Encode and decode HTML entities",
   "repository": "https://.github.com/tomcardoso/atom-html-entitize",
