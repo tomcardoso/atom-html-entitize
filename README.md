@@ -6,6 +6,6 @@ If you want to add a shortcut, just add this to your `keymap.cson`:
 
 ```
 'atom-text-editor':
-  'key1': 'html-entities:encode'
-  'key2': 'html-entities:decode'
+  'key1': 'html-entitize:encode'
+  'key2': 'html-entitize:decode'
 ```
